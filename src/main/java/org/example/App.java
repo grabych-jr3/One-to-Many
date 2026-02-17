@@ -47,7 +47,15 @@ public class App
 //
 //            director4.setMovies(Collections.singletonList(movie3));
 
-            session.getTransaction().commit();
+            //6) Смените режиссера у существующего фильма.
+//            Director director5 = session.find(Director.class, 4);
+//            Movie movie4 = session.find(Movie.class, 13);
+//
+//            movie4.getOwner().getMovies().remove(movie4);
+//            movie4.setOwner(director5);
+//            director5.getMovies().add(movie4);
+//
+//            session.getTransaction().commit();
         }finally {
             sessionFactory.close();
         }
