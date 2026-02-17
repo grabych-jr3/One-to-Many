@@ -31,7 +31,11 @@ public class App
 //            System.out.println(movie1);
 //            System.out.println(director2);
 
-
+            //4) Добавьте еще один фильм для любого режиссера.
+            Director director3 = session.find(Director.class, 2);
+            Movie movie2 = new Movie("Test Name", 2000, director3);
+            session.persist(movie2);
+            director3.getMovies().add(movie2);
 
             session.getTransaction().commit();
         }finally {
