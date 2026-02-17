@@ -55,7 +55,14 @@ public class App
 //            movie4.setOwner(director5);
 //            director5.getMovies().add(movie4);
 //
-//            session.getTransaction().commit();
+
+            //7) Удалите фильм у любого режиссера.
+//            Director director6 = session.find(Director.class, 6);
+//            Movie movieToDelete = director6.getMovies().stream().findFirst().orElse(null);
+//            System.out.println(movieToDelete);
+//            session.remove(movieToDelete);
+//            director6.getMovies().remove(movieToDelete);
+            session.getTransaction().commit();
         }finally {
             sessionFactory.close();
         }

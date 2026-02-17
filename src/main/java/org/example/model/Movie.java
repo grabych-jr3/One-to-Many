@@ -29,6 +29,14 @@ public class Movie {
         this.owner = owner;
     }
 
+    public int getMovieId() {
+        return movieId;
+    }
+
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
+    }
+
     public String getName() {
         return name;
     }
