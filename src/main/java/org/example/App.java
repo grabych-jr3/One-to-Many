@@ -62,6 +62,16 @@ public class App
 //            System.out.println(movieToDelete);
 //            session.remove(movieToDelete);
 //            director6.getMovies().remove(movieToDelete);
+
+            /// Каскадування і рефакторинг
+            Director director = new Director("Cascade test", 99);
+
+            director.addMovie(new Movie("Movie 1", 1999));
+            director.addMovie(new Movie("Movie 2", 2000));
+            director.addMovie(new Movie("Movie 3", 2001));
+
+            session.persist(director);
+
             session.getTransaction().commit();
         }finally {
             sessionFactory.close();
